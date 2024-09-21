@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" prefHeight="890.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ly.pt.controller.CustomerFormController">
+   <children>
+      <Text fill="#3498db" layoutX="296.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Form">
+         <font>
+            <Font name="Gabriola" size="96.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="txtCustomerId" layoutX="160.0" layoutY="219.0" onAction="#txtSearchCustomerOnAction" prefHeight="29.0" prefWidth="251.0" />
+      <TextField fx:id="txtName" layoutX="669.0" layoutY="219.0" prefHeight="29.0" prefWidth="251.0" />
+      <TextField fx:id="txtEmail" layoutX="160.0" layoutY="333.0" prefHeight="29.0" prefWidth="251.0" />
+      <TextField fx:id="txtPhoneNumber" layoutX="669.0" layoutY="333.0" prefHeight="29.0" prefWidth="251.0" />
+      <Text layoutX="160.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id" />
+      <Text layoutX="669.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="160.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="671.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" />
+      <JFXButton buttonType="RAISED" layoutX="240.0" layoutY="437.0" onAction="#btnSaveOnAction" prefHeight="29.0" prefWidth="131.0" style="-fx-background-color: #3498db;" text="Save" />
+      <JFXButton buttonType="RAISED" layoutX="474.0" layoutY="437.0" onAction="#btnUpdateOnAction" prefHeight="29.0" prefWidth="131.0" style="-fx-background-color: #3498db;" text="Update" />
+      <JFXButton buttonType="RAISED" layoutX="686.0" layoutY="437.0" onAction="#btnDeleteOnAction" prefHeight="29.0" prefWidth="131.0" style="-fx-background-color: #3498db;" text="Delete" />
+      <TableView fx:id="tblCustomer" layoutX="146.0" layoutY="569.0" prefHeight="200.0" prefWidth="788.0">
+        <columns>
+          <TableColumn fx:id="tblCustomerId" prefWidth="133.0" text="Customer ID" />
+          <TableColumn fx:id="tblName" prefWidth="218.0" text="Name" />
+            <TableColumn fx:id="tblEmail" prefWidth="225.0" text="Email" />
+            <TableColumn fx:id="tblPhoneNumber" prefWidth="211.0" text="Phone Number" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
